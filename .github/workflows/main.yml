@@ -42,7 +42,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"${{ secrets.PROJECT_KEY }}" /o:"dortlii" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=./**/coverage.opencover.xml
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"dortlii_ZbW.CarRent" /o:"dortlii" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=./**/coverage.opencover.xml
           & dotnet restore .\source\CarRent.sln
           & dotnet build .\source\CarRent.sln
           & dotnet test .\source\CarRent.sln --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
