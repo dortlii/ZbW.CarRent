@@ -1,7 +1,7 @@
-﻿using System.Text.Json.Serialization;
-
-namespace CarRent.Car.Api.v1
+﻿namespace CarRent.Car.Api.v1
 {
+    using System.Text.Json.Serialization;
+
     public class CarResponseDto
     {
         [JsonPropertyName("id")]
