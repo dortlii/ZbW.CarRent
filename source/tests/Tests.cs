@@ -18,7 +18,7 @@
             var car2 = new Car();
         }
 
-        private void G_MyEvent()
+        private static void G_MyEvent()
         {
             Console.WriteLine("Hallo");
         }
